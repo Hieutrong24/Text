@@ -1,3 +1,5 @@
-export async function onRequest({ request, env }) {
-  return await env["cdn-demo-worker"].fetch(request);
+export async function onRequest() {
+  return new Response("Hello from Pages Functions ", {
+    headers: { "content-type": "text/plain" },
+  });
 }
